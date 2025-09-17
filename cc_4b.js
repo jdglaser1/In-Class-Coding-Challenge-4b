@@ -1,3 +1,4 @@
+// Step 1 is to create the .js and html file
 
 // Step 2 building the array
 let products = [{
@@ -24,27 +25,44 @@ let products = [{
 {
     sku: "sku-1004",
     name: "Hose",
-    category: "Lawn and Garden",
+    category: "Household",
     price: 29.99,
     inventory: 20,
 },
 {
     sku: "sku-1005",
     name: "Shirt",
-    category: "Clothes",
+    category: "Apparel",
     price: 12.99,
     inventory: 10,
 },
 ]
-// Step 3
-let discounts
-switch(products.category){
+// Step 3 category discounts with switch
 
-    case "electronics":
-    discount = .2
+for(let product of products){
+    let discount =0
+
+switch(product.category){
+    case "Electronics":
+        discount = 0.20
     break
 
-    default
-    break
-        
+    case "apparel":
+        discount = 0.15
+        break
+    case "groceries":
+    case "household":
+        discount = 0.10
+        break
+    default:
+        discount = 0;
 }
+let promoPrice = product.price - (product.price * discount);
+product.promoPrice = promoPrice.toFixed(2);
+
+}
+
+console.log(products)
+
+// Step 4 customer type adjustment
+
