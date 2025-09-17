@@ -46,12 +46,11 @@ switch(product.category){
     case "Electronics":
         discount = 0.20
     break
-
-    case "apparel":
+    case "Apparel":
         discount = 0.15
         break
-    case "groceries":
-    case "household":
+    case "Grocery":
+    case "Household":
         discount = 0.10
         break
     default:
@@ -65,4 +64,6 @@ product.promoPrice = promoPrice.toFixed(2);
 console.log(products)
 
 // Step 4 customer type adjustment
+
+let customerType = ["Regular", "Student", "Senior"]
 
