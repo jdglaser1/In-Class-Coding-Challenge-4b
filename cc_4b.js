@@ -67,3 +67,14 @@ console.log(products)
 
 let customerType = ["Regular", "Student", "Senior"]
 
+if (customerType == "Student"){
+    products.price * (.95)
+} else if(customerType == "Senior"){
+    products.price * (.93)
+} else{
+    products.price * 1
+}
+
+
+
+
